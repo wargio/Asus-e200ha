@@ -1,0 +1,14 @@
+# mkinitcpio preset file for the 'linux' package
+
+ALL_config="/etc/mkinitcpio-e200ha.conf"
+ALL_kver="/boot/vmlinuz-e200ha"
+
+PRESETS=('default' 'fallback')
+
+#default_config="/etc/mkinitcpio.conf"
+default_image="/boot/initramfs-e200ha.img"
+#default_options=""
+
+#fallback_config="/etc/mkinitcpio.conf"
+fallback_image="/boot/initramfs-e200ha-fallback.img"
+fallback_options="-S autodetect"
