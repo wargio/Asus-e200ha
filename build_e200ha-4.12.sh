@@ -5,7 +5,7 @@ echo "checking requirements"
 command -v acpid >/dev/null 2>&1 || sudo pacman -S acpid
 
 if [ ! -d "sound-topic/asus-e100h-4.12" ]; then
-	if [ ! -f "asus-e100h-4.12.tar.gz" ];
+	if [ ! -f "asus-e100h-4.12.tar.gz" ]; then
 		wget https://git.kernel.org/pub/scm/linux/kernel/git/tiwai/sound.git/snapshot/sound-topic/asus-e100h-4.12.tar.gz
 	fi
 	tar xvf asus-e100h-4.12.tar.gz
