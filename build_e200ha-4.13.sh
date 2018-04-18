@@ -1,7 +1,7 @@
 #!/bin/bash
 MAINFLDR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 KVERSION="4.13"
-KFOLDER="sound-topic/asus-e100h-$KVERSION/"
+KFOLDER="sound-topic/asus-e100h-$KVERSION"
 
 echo ""
 echo "MAINFLDR: $MAINFLDR"
@@ -31,7 +31,7 @@ command -v pulseaudio >/dev/null 2>&1 || sudo pacman -S pulseaudio pulseaudio-al
 if [ ! -d "$KFOLDER" ]; then
 	if [ ! -f "asus-e100h-$KVERSION.tar.gz" ]; then
 		echo "Downloading Linux Kernel $KVERSION"
-		wget "https://git.kernel.org/pub/scm/linux/kernel/git/tiwai/sound.git/snapshot/$KFOLDER.tar.gz"
+		wget "https://git.kernel.org/pub/scm/linux/kernel/git/tiwai/sound.git/snapshot/$KFOLDER.tar.gz" || exit 1
 	fi
 	echo "Unpacking Linux Kernel $KVERSION"
 	tar xf "asus-e100h-$KVERSION.tar.gz"
