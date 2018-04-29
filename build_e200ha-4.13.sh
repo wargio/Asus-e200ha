@@ -15,6 +15,15 @@ function ctrl_c() {
 	exit 1
 }
 
+function syspatch() {
+	FILE="$2"
+	PATCHFILE="$1"
+	if [ ! -f "$FILE.backup" ]; then
+		sudo cp "$FILE" "$FILE.backup"
+		sudo patch -d/ -p0 < "$PATCHFILE"
+	fi
+}
+
 function sysmodify() {
 	FILE="$2"
 	NEWFILE="$1"
@@ -59,6 +68,8 @@ if [ ! -d "/usr/share/alsa/ucm/chtcx2072x/" ]; then
 fi
 echo "Building image"
 sudo mkinitcpio -p e200ha
+echo "Patching grub 10_linux"
+syspatch "$MAINFLDR/10_linux.patch" "/etc/grub.d/10_linux"
 echo "Updating grub"
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 

@@ -1,0 +1,13 @@
+--- /etc/grub.d/10_linux	2018-04-29 10:41:48.905547871 +0200
++++ /etc/grub.d/10_linux.backup	2018-04-29 10:43:18.902627793 +0200
+@@ -186,7 +186,9 @@
+ is_top_level=true
+ 
+ while [ "x$list" != "x" ] ; do
+-  linux=`version_find_latest $list`
++#  linux=`version_find_latest $list`
++  arraylist=($list)
++  linux=${arraylist[0]}
+   gettext_printf "Found linux image: %s\n" "$linux" >&2
+   basename=`basename $linux`
+   dirname=`dirname $linux`

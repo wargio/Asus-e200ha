@@ -14,4 +14,5 @@ clone this repo and run as user (not root) `build_e200ha-4.1x.sh`
 ## FAQ
 
 * Audio not working: install `pavucontrol` and check if the output is HDMI or the sound card.
+* device `tun` is missing: enable tun device via `xconfig`
 
