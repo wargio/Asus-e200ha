@@ -20,6 +20,7 @@ function syspatch() {
 	PATCHFILE="$1"
 	if [ ! -f "$FILE.backup" ]; then
 		sudo cp "$FILE" "$FILE.backup"
+		sudo chmod 0 "$FILE.backup"
 		sudo patch -d/ -p0 < "$PATCHFILE"
 	fi
 }
