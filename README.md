@@ -1,10 +1,15 @@
 Asus E200HA Custom Kernel for Arch Linux
 ========================================
 
-clone this repo and run as user (not root) `build_e200ha-4.1x.sh`
+Big thanks to all the internet community
 
-* Linux 4.12 `build_e200ha-4.12.sh`
+- Linux Kernel 5.0 patches from https://github.com/heikomat/linux (thanks dude!)
+
+clone this repo and run as user (not root) `build_e200ha-5.0.sh`
+
+* Linux 5.0  `build_e200ha-5.0.sh`
 * Linux 4.13 `build_e200ha-4.13.sh`
+* Linux 4.12 `build_e200ha-4.12.sh`
 
 ## Kernel Config
 
@@ -14,5 +19,5 @@ clone this repo and run as user (not root) `build_e200ha-4.1x.sh`
 ## FAQ
 
 * Audio not working: install `pavucontrol` and check if the output is HDMI or the sound card.
-* device `tun` is missing: enable tun device via `xconfig`
+* device `tun` is missing: enable tun device via `make xconfig`
 
