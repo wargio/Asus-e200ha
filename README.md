@@ -1,7 +1,7 @@
+# Looks like the latest arch 5.x kernels now supports the audio of this machine, so this repo is deprecated.
+
 Asus E200HA Custom Kernel for Arch Linux
 ========================================
-
-# Looks like the latest arch 5.x kernels now supports the audio of this machine, so this repo is deprecated.
 
 Big thanks to all the internet community
 
