@@ -1,6 +1,8 @@
 Asus E200HA Custom Kernel for Arch Linux
 ========================================
 
+# Looks like the latest 5.x kernels now supports the audio of this machine.
+
 Big thanks to all the internet community
 
 - Linux Kernel 5.0 patches from https://github.com/heikomat/linux (thanks dude!)
